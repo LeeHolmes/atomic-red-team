@@ -35,7 +35,7 @@ MITRE ATT&CK Technique: [T1089](https://attack.mitre.org/wiki/Technique/T1089)
 ## Disable Default Web Site Logging IIS 7
 
 ### Disable Default Web Site Logging IIS 7
-   %windir%\system32\inetsrv\appcmd.exe set config "Default Web Site" -section:system.webServer/httpLogging /dontLog:"True" /commit:apphost
+    %windir%\system32\inetsrv\appcmd.exe set config "Default Web Site" -section:system.webServer/httpLogging /dontLog:"True" /commit:apphost
 
 ### Restart Default Web Site IIS 7
-   %windir%\system32\inetsrv\appcmd.exe stop site /site.name:"Default Web Site" && %windir%\system32\inetsrv\appcmd.exe start site /site.name:"Default Web Site"
+    %windir%\system32\inetsrv\appcmd.exe stop site /site.name:"Default Web Site" && %windir%\system32\inetsrv\appcmd.exe start site /site.name:"Default Web Site"
