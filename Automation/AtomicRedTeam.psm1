@@ -126,6 +126,79 @@ $actions = @{
             Invoke-Expression $commands[0]
         }
     }
+    
+    'Windows/Defense_Evasion/Disabling_Security_Tools/Stop_Windows_Defender/DisableRealtimeMonitoring' = {
+
+        if($Force -or $PSCmdlet.ShouldContinue("Do you wish to Disable Realtime Monitoring?", "Confirm impactful change"))
+        {
+            ## Extract the command from the page
+            $commands = Get-ActionCode -Path $PSScriptRoot/../Windows/Defense_Evasion/Disabling_Security_Tools.md -SectionName 'Windows 10' 
+            
+            ## Launch the action
+            Invoke-Expression $commands[0]
+        }
+    }
+    
+    'Windows/Defense_Evasion/Disabling_Security_Tools/Stop_Windows_Defender/DisableIOAVProtection' = {
+
+        if($Force -or $PSCmdlet.ShouldContinue("Do you wish to Disable IO AV Protection?", "Confirm impactful change"))
+        {
+            ## Extract the command from the page
+            $commands = Get-ActionCode -Path $PSScriptRoot/../Windows/Defense_Evasion/Disabling_Security_Tools.md -SectionName 'Windows 10' 
+            
+            ## Launch the action
+            Invoke-Expression $commands[1]
+        }
+    }
+    
+    'Windows/Defense_Evasion/Disabling_Security_Tools/Stop_Windows_Defender/DisableBehaviorMonitoring' = {
+
+        if($Force -or $PSCmdlet.ShouldContinue("Do you wish to Disable Behavior Monitoring?", "Confirm impactful change"))
+        {
+            ## Extract the command from the page
+            $commands = Get-ActionCode -Path $PSScriptRoot/../Windows/Defense_Evasion/Disabling_Security_Tools.md -SectionName 'Windows 10' 
+            
+            ## Launch the action
+            Invoke-Expression $commands[2]
+        }
+    }
+    
+    'Windows/Defense_Evasion/Disabling_Security_Tools/Stop_Windows_Defender/DisableIntrusionPreventionSystem' = {
+
+        if($Force -or $PSCmdlet.ShouldContinue("Do you wish to Disable Intrusion Prevention System?", "Confirm impactful change"))
+        {
+            ## Extract the command from the page
+            $commands = Get-ActionCode -Path $PSScriptRoot/../Windows/Defense_Evasion/Disabling_Security_Tools.md -SectionName 'Windows 10' 
+            
+            ## Launch the action
+            Invoke-Expression $commands[3]
+        }
+    }
+    
+    'Windows/Defense_Evasion/Disabling_Security_Tools/Stop_Windows_Defender/DisablePrivacyMode' = {
+
+        if($Force -or $PSCmdlet.ShouldContinue("Do you wish to Disable Privacy Mode?", "Confirm impactful change"))
+        {
+            ## Extract the command from the page
+            $commands = Get-ActionCode -Path $PSScriptRoot/../Windows/Defense_Evasion/Disabling_Security_Tools.md -SectionName 'Windows 10' 
+            
+            ## Launch the action
+            Invoke-Expression $commands[4]
+        }
+    }
+    
+    'Windows/Defense_Evasion/Disabling_Security_Tools/Stop_Windows_Defender/Windows 7/8' = {
+
+        if($Force -or $PSCmdlet.ShouldContinue("Do you wish to Disable Privacy Mode?", "Confirm impactful change"))
+        {
+            ## Extract the command from the page
+            $commands = Get-ActionCode -Path $PSScriptRoot/../Windows/Defense_Evasion/Disabling_Security_Tools.md -SectionName 'Windows 7/8' 
+            
+            ## Launch the action
+            Invoke-Expression $commands[0]
+        }
+    }
+    
 }
 
 function Get-ActionCode
