@@ -244,7 +244,7 @@ function Get-Action
 
     $Action = $Action -replace "\\","/"
 
-    foreach($possibleAction in $actions.Keys)
+    foreach($possibleAction in ($actions.Keys | sort))
     {
         if($possibleAction -like $Action)
         {
