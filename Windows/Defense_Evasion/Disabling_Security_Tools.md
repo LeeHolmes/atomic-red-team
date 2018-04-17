@@ -23,7 +23,7 @@ MITRE ATT&CK Technique: [T1089](https://attack.mitre.org/wiki/Technique/T1089)
 ## Stop Windows Defender
 
 ### Windows 7/8
-   net stop windefend
+    net stop windefend
 
 ### Windows 10
     Set-MpPreference -DisableRealtimeMonitoring $true -Verbose
